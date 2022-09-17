@@ -1,23 +1,14 @@
 <script setup>
 import {onMounted, ref} from 'vue'
 import * as Cesium from 'cesium'
-
+import initViewer from '../assets/js/initViewer.js'
 defineProps({
   msg: String
 })
 let count = ref(0)
 
-function init() {
-  let viewer = new Cesium.Viewer("cesiumContainer", {
-    imageryProvider: new Cesium.UrlTemplateImageryProvider({
-      url: "https://gac-geo.googlecnapps.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}",
-    }),
-    geocoder: false, homeButton: false, sceneModePicker: false, baseLayerPicker: false,
-    navigationHelpButton: false, animation: false, timeline: false, fullscreenButton: false,
-  })
-  viewer.cesiumWidget.creditContainer.style.display = "none"
-
-
+onMounted(() => {
+  let viewer = initViewer.init()
   viewer.entities.add({
     name: 'Red line on terrain',
     polyline: {
@@ -112,9 +103,6 @@ function init() {
     }
   })
   viewer.zoomTo(line_last)
-}
-onMounted(() => {
-  init()
 })
 
 </script>
