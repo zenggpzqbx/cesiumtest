@@ -2,6 +2,7 @@
   <div class="display_components" @click="handleClick">
     <button id="cesiumLine">CesiumLine</button>
     <button id="polylineVolume">PolylineVolume</button>
+    <button id="polygon">Polygon</button>
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 import CesiumLine from "./CesiumLine.vue";
 import PolylineVolume from "./PolylineVolume.vue";
 import router from "../router/index.js";
-
+import Polygon from "./Polygon.vue"
 export default {
   name: "Header.vue",
   methods: {
@@ -21,6 +22,9 @@ export default {
           break;
         case 'polylineVolume':
           router.push(`PolylineVolume`)
+          break;
+        case 'polygon':
+          router.push(`Polygon`)
           break;
       }
     }
