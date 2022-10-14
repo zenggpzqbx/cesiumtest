@@ -51,7 +51,7 @@ onMounted(() => {
     if(rotation>=360){
       rotation = 0;
     }
-  },50)
+  },25)
 
 })
 
