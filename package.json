@@ -9,12 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "element-plus": "^2.2.20",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.8",
     "vue": "^3.2.37",
     "vue-router": "4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
     "cesium": "^1.97.0",
+    "naive-ui": "^2.33.5",
+    "vfonts": "^0.0.3",
     "vite": "^3.1.1",
     "vite-plugin-cesium": "^1.2.22"
   }

@@ -1,11 +1,9 @@
 import {createWebHistory, createRouter} from 'vue-router'
-import CesiumLine from '../components/CesiumLine.vue'
-import PolylineVolume from '../components/PolylineVolume.vue'
-import Polygon from '../components/Polygon.vue'
+import CameraTutorial from "../components/CameraTutorial.vue"
+import EntityTutorial from "../components/EntityTutorial.vue"
 const routes = [
-    {path:'/cesiumLine', name:'cesiumLine', component:CesiumLine},
-    {path:'/polylineVolume', name:'polylineVolume', component:PolylineVolume},
-    {path:'/polygon', name: 'polygon', component: Polygon}
+    {path:'/cameraTutorial', name: 'cameraTutorial', component: CameraTutorial},
+    {path:'/entityTutorial', name: 'entityTutorial', component: EntityTutorial}
 ]
 const history = createWebHistory();
 const router = createRouter({
