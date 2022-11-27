@@ -54,28 +54,28 @@ onMounted(() => {
     requestWaterMask: true, // 请求水体效果所需要的海岸线数据
     requestVertexNormals: true, // 请求地形照明数据
   });
-
+  viewer.scene.globe.depthTestAgainstTerrain = true
 
   viewer.cesiumWidget.creditContainer.style.display = "none"
 })
 function addPoint() {
   viewer.entities.removeAll()
-  let point = viewer.entities.add({
+  viewer.trackedEntity = viewer.entities.add({
     id: 0,
     name: 'point',
-    position: Cesium.Cartesian3.fromDegrees(110.234, 36.789, 0),
+    position: Cesium.Cartesian3.fromDegrees(110.234, 36.789, 100),
     point: {
       show: true,
       color: Cesium.Color.AQUA,
-      pixelSize:100,
+      pixelSize: 10,
       outlineColor: Cesium.Color.RED,
-      outlineWidth: 20,
-      scaleByDistance: new Cesium.NearFarScalar(100,1,1000,0.1),
-      translucencyByDistance: new Cesium.NearFarScalar(100,1,1000,0.5),
-      distanceDisplayCondition:new Cesium.DistanceDisplayCondition(0, 1000)
+      outlineWidth: 2,
+      heightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
+      // scaleByDistance: new Cesium.NearFarScalar(0,1,1000,0.1),
+      // translucencyByDistance: new Cesium.NearFarScalar(0,1,1000,0.5),
+      // distanceDisplayCondition:new Cesium.DistanceDisplayCondition(0, 1000)
     }
   })
-  viewer.zoomTo(point)
 }
 //可以设置预定义的颜色，也可以自己定义，
 // 方法一：Cesium.Color.fromCssColorString('#67ADDF')
