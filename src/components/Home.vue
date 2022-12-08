@@ -2,6 +2,9 @@
   <el-menu @select="handleSelected">
     <el-menu-item class="item_style" index="camera">Camera教程</el-menu-item>
     <el-menu-item class="item_style" index="entity">Entity教程</el-menu-item>
+    <el-menu-item class="item_style" index="coordinate">坐标系转换</el-menu-item>
+    <el-menu-item class="item_style" index="tileset">三维剖切</el-menu-item>
+    <el-menu-item class="item_style" index="SunshineAnalysis">日照分析</el-menu-item>
   </el-menu>
   <router-view class="middle"></router-view>
 </template>
@@ -17,16 +20,21 @@ function handleSelected(index) {
     case 'entity':
       router.push(`EntityTutorial`);
       break;
+    case 'coordinate':
+      router.push(`CoordinatesystemConversion`);
+      break;
+    case 'tileset':
+      router.push(`TilesetCut`);
+      break;
+    case 'SunshineAnalysis':
+      router.push(`SunshineAnalysis`);
+      break;
+
   }
 }
 </script>
 
 <style scoped>
-.menu {
-  height: 100%;
-  width: 20%;
-  border: #242424 solid 1px;
-}
 
 .item_style {
   height: 40px;
