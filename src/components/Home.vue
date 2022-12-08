@@ -5,6 +5,7 @@
     <el-menu-item class="item_style" index="coordinate">坐标系转换</el-menu-item>
     <el-menu-item class="item_style" index="tileset">三维剖切</el-menu-item>
     <el-menu-item class="item_style" index="SunshineAnalysis">日照分析</el-menu-item>
+    <el-menu-item class="item_style" index="EagleeyeDiagram">鹰眼图</el-menu-item>
   </el-menu>
   <router-view class="middle"></router-view>
 </template>
@@ -28,6 +29,9 @@ function handleSelected(index) {
       break;
     case 'SunshineAnalysis':
       router.push(`SunshineAnalysis`);
+      break;
+    case 'EagleeyeDiagram':
+      router.push(`EagleeyeDiagram`);
       break;
 
   }

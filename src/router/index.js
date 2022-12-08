@@ -4,12 +4,14 @@ import EntityTutorial from "../components/EntityTutorial.vue"
 import CoordinateSystemConversion from "../components/CoordinateSystemConversion.vue"
 import TilesetCut from  "../components/TilesetCut.vue"
 import SunshineAnalysis from  "../components/SunshineAnalysis.vue"
+import EagleeyeDiagram from "../components/EagleeyeDiagram.vue"
 const routes = [
     {path:'/cameraTutorial', name: 'cameraTutorial', component: CameraTutorial},
     {path:'/entityTutorial', name: 'entityTutorial', component: EntityTutorial},
     {path:'/CoordinateSystemConversion', name: 'coordinateSystemConversion', component: CoordinateSystemConversion},
     {path:'/TilesetCut', name: 'tilesetCut', component: TilesetCut},
     {path:'/SunshineAnalysis', name: 'sunshineAnalysis', component: SunshineAnalysis},
+    {path:'/EagleeyeDiagram', name: 'eagleeyeDiagram', component: EagleeyeDiagram},
 ]
 const history = createWebHistory();
 const router = createRouter({

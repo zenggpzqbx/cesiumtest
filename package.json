@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "element-plus": "^2.2.20",
+    "leaflet": "^1.9.3",
     "unplugin-auto-import": "^0.11.2",
     "unplugin-vue-components": "^0.22.8",
     "vue": "^3.2.37",
